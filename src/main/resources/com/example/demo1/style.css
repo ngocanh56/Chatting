@@ -1,0 +1,38 @@
+/* styles.css */
+
+.text-field-message,
+.text-area-message {
+    -fx-control-inner-background: #F5F5F5; /* Màu nền nhẹ */
+    -fx-padding: 5; /* Khoảng cách bên trong TextField và TextArea */
+}
+
+.sent-message {
+    -fx-background-color: pink;
+}
+
+/* Định nghĩa kiểu cho nút Send */
+.button-send {
+    -fx-background-color: #FF69B4; /* Màu nền của nút */
+    -fx-text-fill: white; /* Màu chữ trên nút */
+    -fx-font-size: 14; /* Kích thước font chữ */
+    -fx-font-weight: bold; /* Font chữ đậm */
+    -fx-padding: 5 10; /* Khoảng cách bên trong nút */
+}
+.message-box-sent {
+    -fx-background-color: #FF69B4; /* Màu nền của tin nhắn gửi đi */
+    -fx-text-fill: white; /* Màu chữ của tin nhắn gửi đi */
+    -fx-font-size: 14; /* Kích thước font chữ */
+    -fx-font-weight: bold; /* Font chữ đậm */
+    -fx-padding: 5; /* Khoảng cách bên trong tin nhắn */
+    -fx-border-radius: 5; /* Độ cong viền */
+    -fx-border-color: #D02090; /* Màu viền */
+}
+
+.message-box-received {
+    -fx-background-color: #FFF0F5; /* Màu nền của tin nhắn nhận */
+    -fx-text-fill: #000080; /* Màu chữ của tin nhắn nhận */
+    -fx-font-size: 14; /* Kích thước font chữ */
+    -fx-padding: 5; /* Khoảng cách bên trong tin nhắn */
+    -fx-border-radius: 5; /* Độ cong viền */
+    -fx-border-color: #D3D3D3; /* Màu viền */
+}

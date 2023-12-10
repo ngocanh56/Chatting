@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="chatContainer" spacing="10" style="-fx-background-color: #FFE4E1; -fx-padding: 10;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.ChatController">
+    <!-- Cute Chat Header -->
+    <HBox alignment="CENTER_LEFT" spacing="10">
+        <!-- Avatar and Username -->
+        <HBox prefHeight="63.0" prefWidth="260.0" spacing="5">
+            <!-- Avatar -->
+            <ImageView fitHeight="63.0" fitWidth="70.0">
+                <Image url="@avatar.png" />
+            </ImageView>
+
+            <!-- Username -->
+            <Label prefHeight="52.0" prefWidth="158.0" text="Username">
+                <font>
+                    <Font name="System Bold" size="15.0" />
+                </font>
+            </Label>
+        </HBox>
+
+        <!-- Title -->
+        <ImageView fitHeight="46.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true" />
+    </HBox>
+
+    <!-- Cute Chat Area -->
+    <VBox fx:id="messageContainer"  spacing="5" style="-fx-background-color: #FFF;" prefHeight="200" prefWidth="300">
+        <!-- Messages will be added dynamically here -->
+    </VBox>
+
+    <HBox prefHeight="13.0" prefWidth="300.0">
+        <children>
+            <!-- Cute Message Input -->
+            <TextField fx:id="messageTextField" onAction="#sendMessage" prefHeight="30.0" prefWidth="269.0" promptText="Enter your message..." style="-fx-background-color: #FFF0F5; -fx-text-fill: #000080; -fx-font-size: 14;" />
+
+            <!-- Button to send message -->
+            <Button onAction="#sendMessage" prefHeight="30.0" prefWidth="70.0" styleClass="button-send" stylesheets="@style.css" text="Send" />
+        </children>
+    </HBox>
+</VBox>
