@@ -23,6 +23,11 @@
                         <Font name="System Bold" size="29.0" />
                     </font>
                 </Label>
+            <ImageView fitHeight="56.0" fitWidth="103.0" layoutX="307.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@video-calling-app%20(1).png" />
+               </image>
+            </ImageView>
             </Pane>
         </HBox>
     </HBox>
@@ -30,15 +35,17 @@
     <!-- Cute Chat Area -->
     <VBox fx:id="messageContainer" prefHeight="362.0" prefWidth="363.0" spacing="5" style="-fx-background-color: #FFF;">
       <children>
-         <VBox prefWidth="363.0">
-            <children>
-               <ImageView fitHeight="384.0" fitWidth="363.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@background.jpg" />
-                  </image>
-               </ImageView>
-            </children>
-         </VBox>
+         <VBox prefWidth="363.0" />
+         <ImageView fitHeight="150.0" fitWidth="367.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@account1.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="150.0" fitWidth="367.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@account12.png" />
+            </image>
+         </ImageView>
       </children></VBox>
 
     <HBox prefHeight="50.0" prefWidth="300.0">
