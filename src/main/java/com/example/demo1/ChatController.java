@@ -5,8 +5,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
@@ -16,9 +14,6 @@ import java.util.ResourceBundle;
 public class ChatController implements Initializable {
 
     @FXML
-    private VBox chatContainer;
-
-    @FXML
     private VBox messageContainer;
 
     @FXML
@@ -26,31 +21,35 @@ public class ChatController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        // Initialize chat, load previous messages, etc.
-        // ...
+        // Initialize the chat with some sample messages
+         // Received from another user
     }
 
     @FXML
     private void sendMessage() {
         String messageText = messageTextField.getText().trim();
         if (!messageText.isEmpty()) {
-            Label messageLabel = new Label(messageText);
+            // Add the sent message to the chat
+            addMessage(messageText, true);
 
-            // Apply the style based on whether the message is sent or received
-            if (isMessageSentByCurrentUser()) {
-                messageLabel.getStyleClass().add("message-box-sent");
-            } else {
-                messageLabel.getStyleClass().add("message-box-received");
-            }
+            // Simulate receiving a response (you can replace this with actual logic)
+            String response = "Received: " + messageText;
+            addMessage(response, false);
 
-            messageContainer.getChildren().add(messageLabel);
             messageTextField.clear();
         }
     }
 
-    private boolean isMessageSentByCurrentUser() {
-        // Add your logic to determine if the message is sent by the current user
-        // For example, you can compare with a predefined username or user ID
-        return true; // Change this based on your logic
+    private void addMessage(String message, boolean sentByCurrentUser) {
+        Label messageLabel = new Label(message);
+
+        // Apply the style based on whether the message is sent or received
+        if (sentByCurrentUser) {
+            messageLabel.getStyleClass().add("message-box-sent");
+        } else {
+            messageLabel.getStyleClass().add("message-box-received");
+        }
+
+        messageContainer.getChildren().add(messageLabel);
     }
 }
